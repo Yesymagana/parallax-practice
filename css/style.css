@@ -1,0 +1,53 @@
+/* Parallax */
+
+body{
+    margin: 0;
+    font-size: 15px;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* transform-style: preserve-3d; */
+    perspective: 10px;
+}
+header{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background{
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
+    transform: translateZ(-10px) scale(2);
+}
+h1{
+    z-index: 1;
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+.foreground{
+    height: 150vh;
+    width: 130vw;
+    z-index: 2;
+    object-fit: cover;
+    position: absolute;
+    transform: translateZ(-5px) scale(1.5);
+    background-position: bottom center;
+}
+section{
+    background: black;
+    color: white;
+    padding: 100px;
+}
